@@ -20,6 +20,16 @@ public class Member {
     @JoinColumn(name = "team_id")
     private Team team;
 
+    public Member(String name) {
+        this(name, 0);
+    }
+
+    public Member(String name, int age) {
+        this.name = name;
+        this.age = age;
+        this.team = null;
+    }
+
     public Member(String name, int age, Team team) {
         this.name = name;
         this.age = age;
